@@ -1,0 +1,164 @@
+/* Variables de color para el tema Orion (Oscuridad y Brillos) */
+:root {
+    --color-fondo-oscuro: #0f172a; /* Azul muy oscuro, casi negro (espacio) */
+    --color-nebula: #1e293b;       /* Gris azulado oscuro (fondo de tarjeta) */
+    --color-brillo: #38bdf8;       /* Azul claro brillante (neón/estrella) */
+    --color-acento: #6366f1;       /* Violeta para botones y enlaces */
+    --color-texto-claro: #f8fafc;  /* Blanco suave */
+    --color-error: #ef4444;        /* Rojo */
+}
+
+/* Base Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto-claro);
+    background-color: var(--color-fondo-oscuro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos Específicos del Formulario */
+.contenedor-formulario {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.tarjeta-formulario {
+    background-color: var(--color-nebula);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-brillo); /* Sombra + Borde brillante */
+    transition: transform 0.3s ease;
+}
+
+.titulo-formulario {
+    color: var(--color-brillo);
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.7); /* Efecto neón en el título */
+}
+
+.subtitulo-formulario {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* Controles de Formulario */
+.grupo-control {
+    margin-bottom: 20px;
+}
+
+.grupo-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.input-orion {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #334155; /* Fondo de input ligeramente más claro */
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: var(--color-texto-claro);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-orion:focus {
+    border-color: var(--color-brillo);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5); /* Anillo de enfoque brillante */
+    outline: none;
+}
+
+/* Errores de Validación */
+.input-orion.is-invalid {
+    border-color: var(--color-error);
+}
+
+.feedback-error {
+    color: var(--color-error);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Botones y Enlaces */
+.flex-botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.boton-orion {
+    background-color: var(--color-acento);
+    color: var(--color-texto-claro);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.boton-orion:hover {
+    background-color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.enlace-login {
+    color: var(--color-brillo);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.enlace-login:hover {
+    text-decoration: underline;
+    color: #7dd3fc;
+}
+body {
+    overflow-x: hidden;
+}
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    transition: margin .25s ease-out;
+}
+#page-content-wrapper {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+.sidebar-heading {
+    padding: 1.5rem 1.25rem;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+.list-group-item {
+    border: none;
+    padding: 1rem 1.5rem;
+}
+.list-group-item:hover {
+    background-color: #495057;
+    color: #fff !important;
+}

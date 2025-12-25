@@ -1,0 +1,24 @@
+.search-bar-orion {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    padding: 2px 15px;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.editable-text:focus {
+    outline: none;
+    background: rgba(0, 242, 255, 0.05);
+    border-bottom: 2px solid var(--cyan-orion);
+}
+
+.saved-flash {
+    color: #22c55e !important;
+    transition: 0.5s;
+}
+
+.review-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--purple-orion);
+}

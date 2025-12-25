@@ -1,0 +1,18 @@
+.badge-nivel {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nivel-basico { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid #22c55e; }
+.nivel-intermedio { background: rgba(234, 179, 8, 0.15); color: #eab308; border: 1px solid #eab308; }
+.nivel-avanzado { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid #ef4444; }
+
+.filter-sidebar {
+    position: sticky;
+    top: 100px;
+    background: #161b22;
+    border: 1px solid rgba(255,255,255,0.05);
+}

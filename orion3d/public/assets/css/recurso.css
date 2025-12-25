@@ -1,0 +1,53 @@
+.file-card {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-card:hover {
+    border-color: var(--cyan-orion);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.1);
+}
+
+.file-icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.file-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.file-actions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.file-card:hover .file-actions {
+    opacity: 1;
+}
+
+.btn-download, .btn-delete {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.btn-download:hover { color: var(--cyan-orion); }
+.btn-delete:hover { color: #ff4d4d; }

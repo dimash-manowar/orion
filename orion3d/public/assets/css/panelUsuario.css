@@ -1,0 +1,603 @@
+:root {
+    --bg-principal: #0b0e14;
+    /* Fondo oscuro profundo */
+    --bg-sidebar: #0f172a;
+    /* Fondo azulado del lateral */
+    --bg-card: #161b22;
+    /* Fondo de las cajas */
+    --cyan-orion: #00f2ff;
+    /* El brillo cian */
+    --purple-orion: #bd00ff;
+    /* El brillo púrpura */
+    --text-white: #e6edf3;
+    /* Blanco suave */
+}
+
+/* Sidebar General */
+.sidebar-orion {
+    width: 260px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    color: white;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+/* El Halo de luz en la foto */
+.foto-halo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.foto-halo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan-orion);
+    /* Aquí creamos el brillo hacia afuera */
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5), inset 0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+/* Estilo del Nombre y Rol */
+.perfil-sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.rol-tag {
+    display: block;
+    text-align: center;
+    color: var(--purple-orion);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(189, 0, 255, 0.5);
+}
+
+/* Los items del menú */
+.menu-sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #8b949e;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.menu-sidebar a.active {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--cyan-orion);
+    border-left: 3px solid var(--cyan-orion);
+}
+
+/* Refina tu .topbar-orion */
+
+.menu-sidebar a:hover {
+    background: rgba(0, 242, 255, 0.05);
+    /* Un brillo cian muy tenue */
+    color: #00f2ff;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#btn-hamburguesa {
+    background: none;
+    border: none;
+    color: #8b949e;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo-text span {
+    color: var(--cyan-orion);
+    /* Usa el color que ya definiste */
+}
+
+/* Derecha del Topbar */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.iconos-notificacion {
+    display: flex;
+    gap: 20px;
+}
+
+.iconos-notificacion a {
+    color: #8b949e;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.iconos-notificacion a:hover {
+    color: var(--cyan-orion);
+}
+
+/* El punto de notificación que tenías */
+.punto-alerta {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: var(--purple-orion);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--purple-orion);
+}
+
+/* Contenedor perfil mini */
+.perfil-min {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-info-min .user-name {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.perfil-min img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--cyan-orion);
+}
+
+/* Esto hace que el Sidebar y el Contenido se dividan la pantalla */
+.app-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0e14;
+    /* Fondo oscuro total */
+}
+
+.main-wrapper {
+    flex: 1;
+    /* Esto empuja al Topbar y contenido a la derecha */
+    display: flex;
+    flex-direction: column;
+}
+
+.central-content {
+    padding: 40px 30px;
+    background: #1c2333;
+    /* Mantener fondo negro debajo de la bienvenida */
+    flex: 1;
+}
+
+/* Arreglo para el Topbar */
+.topbar-orion {
+    height: 70px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0f172a;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+/* Contenedor padre debe ser relativo */
+.perfil-min {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    color: lawngreen;
+}
+
+/* El menú oculto por defecto */
+.dropdown-menu-orion {
+    position: absolute;
+    top: 100%;
+    /* Aparece justo debajo del perfil */
+    right: 0;
+    width: 200px;
+    background: #161b22;
+    /* Gris oscuro del panel */
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px 0;
+    display: none;
+    /* Oculto inicialmente */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+/* Mostrar al pasar el ratón (Hover) */
+.perfil-min:hover .dropdown-menu-orion {
+    display: block;
+    animation: fadeInOrion 0.3s ease;
+}
+
+/* Estilo de los enlaces del menú */
+.dropdown-menu-orion a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.dropdown-menu-orion a i {
+    color: var(--cyan-orion);
+}
+
+.dropdown-menu-orion a:hover {
+    background: rgba(0, 242, 255, 0.05);
+    color: white;
+}
+
+/* Crea un bloque invisible arriba del menú para que nunca se pierda el hover */
+.dropdown-menu-orion::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    /* Ajusta este valor según la separación que tenga tu menú */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+}
+
+/* Enlace de salida en rojo/púrpura */
+.dropdown-menu-orion a.logout-link:hover {
+    background: rgba(189, 0, 255, 0.1);
+    color: #ff4d4d;
+}
+
+.divider-orion {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 8px 0;
+}
+
+.perfil-min:hover .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    color: var(--cyan-orion);
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInOrion {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submenu-content {
+    display: none;
+    /* Oculto por defecto */
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 20px;
+}
+
+.submenu-content a {
+    font-size: 0.85rem;
+    padding: 10px;
+}
+
+.menu-item-dropdown .arrow {
+    font-size: 0.7rem;
+    float: right;
+    transition: 0.3s;
+}
+
+/* Clase para rotar la flecha cuando esté abierto */
+.rotate-arrow {
+    transform: rotate(90deg);
+}
+
+/* Contenedor de la tabla */
+.card-orion-table {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo general de la tabla */
+.table-dark-orion {
+    background: transparent;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table-dark-orion thead th {
+    border: none;
+    color: var(--cyan-orion);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+.table-dark-orion tbody tr {
+    background: rgba(255, 255, 255, 0.02);
+    transition: 0.3s;
+}
+
+.table-dark-orion tbody tr:hover {
+    background: rgba(0, 242, 255, 0.03);
+    transform: scale(1.005);
+}
+
+.table-dark-orion td {
+    border: none;
+    padding: 15px;
+    color: #8b949e;
+}
+
+/* Elementos internos */
+.avatar-table {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--cyan-orion);
+}
+
+.badge-rol-purple {
+    background: rgba(189, 0, 255, 0.1);
+    color: #bd00ff;
+    border: 1px solid #bd00ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Botones de acción */
+.btn-action-edit,
+.btn-action-delete {
+    background: none;
+    border: none;
+    color: #8b949e;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-action-edit:hover {
+    color: var(--cyan-orion);
+    text-shadow: 0 0 10px var(--cyan-orion);
+}
+
+.btn-action-delete:hover {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px #ff4d4d;
+}
+
+/* Punto de estado */
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-dot.active {
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.badge-rol-cyan {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--cyan-orion);
+    border: 1px solid var(--cyan-orion);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-rol-purple {
+    background: rgba(189, 0, 255, 0.1);
+    color: #bd00ff;
+    border: 1px solid #bd00ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.menu-section {
+    font-size: 0.65rem;
+    color: var(--purple-orion);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 20px 0 10px 15px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.sidebar-xp-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.tracking-wider {
+    letter-spacing: 1px;
+}
+
+/* Animación opcional para la barra al cargar */
+.progress-bar {
+    transition: width 1.5s ease-in-out;
+}
+
+/* Estado inicial: oculto */
+.submenu-content {
+    display: none;
+    padding-left: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Estado cuando se hace clic */
+.submenu-content.show {
+    display: block;
+}
+
+/* Animación de la flecha */
+.arrow {
+    transition: transform 0.3s ease;
+    float: right;
+    margin-top: 5px;
+}
+
+/* CSS in-line para asegurar la diferenciación de roles */
+.tema-admin {
+    --color-orion: #00f2ff;
+}
+
+.tema-profe {
+    --color-orion: #bc13fe;
+}
+
+.tema-usuario {
+    --color-orion: #2ecc71;
+}
+
+.foto-halo {
+    border: 2px solid var(--color-orion);
+    box-shadow: 0 0 15px var(--color-orion);
+}
+
+.rol-tag {
+    background: var(--color-orion);
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+}
+
+.logo-text span,
+.text-cyan {
+    color: var(--color-orion) !important;
+}
+
+.zona-indicador {
+    color: var(--color-orion);
+    opacity: 0.7;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+.submenu-content { display:none; }
+.submenu-content.open { display:block; }
+/* ===== Sidebar: botones de menú (dropdown) con el mismo estilo que los links ===== */
+.menu-sidebar .menu-toggle{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  color: rgba(255,255,255,.75);
+  font-size: 14px;
+  text-align: left;
+
+  transition: background .2s ease, color .2s ease;
+}
+
+.menu-sidebar .menu-toggle:hover{
+  background: rgba(0, 242, 255, 0.08);
+  color: #fff;
+}
+
+.menu-sidebar .menu-toggle:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/* Icono flecha a la derecha */
+.menu-sidebar .menu-toggle .arrow{
+  margin-left: auto;
+  transition: transform .2s ease;
+  opacity: .7;
+}
+
+.menu-sidebar .menu-toggle.open .arrow{
+  transform: rotate(90deg);
+  opacity: 1;
+}
+/* Submenús */
+.submenu-content{
+  display: none;
+  margin-left: 8px;
+  margin-top: 6px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+
+.submenu-content.open{
+  display: block;
+}
+
+.submenu-content a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 12px;
+  border-radius: 10px;
+
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: background .2s ease, color .2s ease;
+}
+
+.submenu-content a:hover{
+  background: rgba(255,255,255,.04);
+  color: #fff;
+}

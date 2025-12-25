@@ -1,0 +1,27 @@
+/* Badge de pago */
+.badge-pago.completado { color: #22c55e; border: 1px solid #22c55e; background: rgba(34, 197, 94, 0.1); padding: 3px 8px; border-radius: 5px; font-size: 0.75rem; }
+.badge-pago.pendiente { color: #f59e0b; border: 1px solid #f59e0b; background: rgba(245, 158, 11, 0.1); padding: 3px 8px; border-radius: 5px; font-size: 0.75rem; }
+
+/* Barra de progreso sutil */
+.progress-bar-container {
+    width: 100px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--cyan-orion);
+    box-shadow: 0 0 10px var(--cyan-orion);
+    border-radius: 10px;
+}
+
+.progress-bar-container small {
+    position: absolute;
+    right: -35px;
+    top: -6px;
+    color: #8b949e;
+    font-size: 0.7rem;
+}

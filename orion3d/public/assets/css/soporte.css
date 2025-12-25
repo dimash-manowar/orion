@@ -1,0 +1,18 @@
+.duda-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #444;
+}
+
+.duda-item.resuelta {
+    border-left-color: var(--cyan-orion);
+}
+
+.respuesta-profe {
+    background: rgba(191, 0, 255, 0.05);
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.italic { font-style: italic; }

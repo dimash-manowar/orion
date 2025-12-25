@@ -1,0 +1,17 @@
+.termino-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 2px solid var(--cyan-orion);
+    transition: 0.3s;
+}
+
+.termino-item:hover {
+    background: rgba(0, 242, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.search-glosario input {
+    font-size: 0.85rem;
+    border-color: rgba(255,255,255,0.1);
+}

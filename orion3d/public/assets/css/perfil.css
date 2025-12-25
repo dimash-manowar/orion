@@ -1,0 +1,35 @@
+.card-curso-logro {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(0, 242, 255, 0.3);
+    border-radius: 10px;
+}
+
+.progress-orion-sm {
+    height: 4px;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-orion-sm .fill {
+    height: 100%;
+    background: var(--cyan-orion);
+    box-shadow: 0 0 8px var(--cyan-orion);
+}
+
+.btn-certificado-link {
+    color: #ffd700; /* Oro para el certificado */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-certificado-link:hover {
+    background: #ffd700;
+    color: #000;
+}
